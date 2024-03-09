@@ -60,4 +60,9 @@ public class Pause : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(mainMenu);
     }
+
+    public void QuitToDesk()
+    {
+        Application.Quit();
+    }
 }

@@ -12,17 +12,17 @@ namespace TD
         public void LoadDeck(DeckData deckToLoad)
         {
             targetDeck = deckToLoad;
-            Addressables.LoadAssetsAsync<CardData>(targetDeck.labelsToInclude[0].labelString, null).Completed += OnResourcesRetrieved;
+            //Addressables.LoadAssetsAsync<CardData>(targetDeck.labelsToInclude[0].labelString, null).Completed += OnResourcesRetrieved;
         }
 
-        private void OnResourcesRetrieved(AsyncOperationHandle<IList<CardData>> obj)
-        {
-            targetDeck.CardsRetrieved((List<CardData>)obj.Result);
+        //private void OnResourcesRetrieved(AsyncOperationHandle<IList<CardData>> obj)
+        //{
+        //    targetDeck.CardsRetrieved((List<CardData>)obj.Result);
 
-            if (OnDeckLoaded != null)
-                OnDeckLoaded();
+        //    if (OnDeckLoaded != null)
+        //        OnDeckLoaded();
 
-            Destroy(this);
-        }
+        //    Destroy(this);
+        //}
     }
 }
